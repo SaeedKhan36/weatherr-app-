@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather • Quick Lookup</title>
+    <!-- Modern font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<div>
-    <h1 style="color: aqua; text-decoration: dashed; text-align: center; background-color: darkred;">
-        Weather app
-    </h1>
-    <input type="text" name="" id="cityInput" placeholder="enter city name.....">
-    <button id="searchBtn">Get Weather</button>
-    <div id="result"></div>
-</div>
+  <main class="app">
+    <header class="app__header">
+      <h1 class="app__title">Weather</h1>
+      <p class="app__subtitle">Quick city weather lookup</p>
+    </header>
+
+    <section class="app__controls">
+      <div class="input-group">
+        <input id="cityInput" class="input" type="text" placeholder="Enter city name" aria-label="City name">
+        <button id="searchBtn" class="btn">Get Weather</button>
+      </div>
+    </section>
+
+    <section id="result" class="app__result" aria-live="polite"></section>
+
+    <footer class="app__footer">Built with OpenWeatherMap</footer>
+  </main>
 
 
-
-
-    <script src="index.js"> </script>
+    <script src="index.js"></script>
 
 </body>
 </html>
-
-
-
- 

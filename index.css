@@ -1,0 +1,122 @@
+:root{
+	--bg-start: #e0f2fe;
+	--bg-end: #f8fafc;
+	--card-bg: #ffffff;
+	--accent: #0ea5e9;
+	--muted: #6b7280;
+	--glass: rgba(255,255,255,0.6);
+	--radius: 12px;
+}
+
+*{box-sizing:border-box}
+body{
+	margin:0;
+	font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background: linear-gradient(180deg,var(--bg-start),var(--bg-end));
+	color:#0f172a;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	min-height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding:32px;
+}
+
+.app{
+	width:100%;
+	max-width:720px;
+	background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.7));
+	border-radius:16px;
+	box-shadow: 0 8px 30px rgba(2,6,23,0.12);
+	padding:28px;
+}
+
+.app__header{
+	text-align:center;
+	margin-bottom:18px;
+}
+.app__title{
+	margin:0;
+	font-size:28px;
+	letter-spacing:0.4px;
+	color:var(--accent);
+}
+.app__subtitle{
+	margin:6px 0 0 0;
+	font-size:13px;
+	color:var(--muted);
+}
+
+.app__controls{
+	display:flex;
+	justify-content:center;
+	margin:18px 0;
+}
+
+.input-group{
+	display:flex;
+	gap:12px;
+	width:100%;
+}
+.input{
+	flex:1 1 auto;
+	padding:12px 14px;
+	border-radius:10px;
+	border:1px solid rgba(15,23,42,0.06);
+	background:transparent;
+	font-size:15px;
+	outline:none;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.input:focus{
+	border-color:var(--accent);
+	box-shadow:0 4px 18px rgba(14,165,233,0.12);
+}
+
+.btn{
+	background:linear-gradient(180deg,var(--accent), #0284c7);
+	border:none;
+	color:white;
+	padding:10px 16px;
+	border-radius:10px;
+	cursor:pointer;
+	font-weight:600;
+	min-width:120px;
+	transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(2,6,23,0.08)}
+
+.app__result{
+	margin-top:18px;
+	display:flex;
+	gap:12px;
+	flex-direction:column;
+	align-items:stretch;
+}
+
+.weather-card{
+	background:var(--card-bg);
+	border-radius:var(--radius);
+	padding:16px;
+	box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+	display:flex;
+	gap:16px;
+	align-items:center;
+}
+.weather-card p{margin:4px 0;font-size:15px}
+.weather-card .city{font-weight:700;font-size:16px}
+.weather-card .temp{font-weight:600;color:var(--accent);font-size:20px}
+.weather-card .meta{color:var(--muted);font-size:13px}
+
+.app__footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12px}
+
+@media (max-width:520px){
+	.app{padding:18px}
+	.btn{min-width:90px;padding:9px 12px}
+	.app__title{font-size:22px}
+}
+
+/* Utility class for when JS injects the result markup */
+.result-inner{display:flex;flex-direction:column;gap:6px}
+
